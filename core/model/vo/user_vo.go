@@ -245,6 +245,34 @@ type SearchUserResp struct {
 	Data *SearchUserRespData `json:"data"`
 }
 
+type BatchGetIdResp struct {
+	CommonVo
+	Data BatchGetIdRespData `json:"data"`
+}
+
+type BatchGetIdRespData struct {
+	EmailUsers     []EmailUserInfo `json:"email_users"`
+	EmailsNotExist     []string `json:"emails_not_exist"`
+	MobileUsers     []string `json:"mobile_users"`
+	MobilesNotExist     []string `json:"mobiles_not_exist"`
+}
+
+type EmailUserInfo struct {
+	OpenId        string     `json:"open_id"`
+	UserId        string     `json:"user_id"`
+}
+
+type DepartmentDetailInfo struct {
+	ChatId      string `json:"chat_id"`
+	HasChild    bool   `json:"has_child"`
+	Id          string `json:"id"`
+	Leader      Leader `json:"leader"`
+	MemberCount int    `json:"member_count"`
+	Name        string `json:"name"`
+	ParentId    string `json:"parent_id"`
+	Status      int    `json:"status"`
+}
+
 type SearchUserRespData struct {
 	HasMore   bool             `json:"has_more"`
 	PageToken string           `json:"page_token"`

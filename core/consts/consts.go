@@ -123,6 +123,8 @@ const (
 
 	//搜索用户
 	ApiSearchUser = "https://open.feishu.cn/open-apis/search/v1/user"
+	//使用手机号或邮箱获取用户 ID
+	ApiBatchGetId = "https://open.feishu.cn/open-apis/user/v1/batch_get_id"
 
 	//检验应用管理员
 	ApiIsUserAdmin = "https://open.feishu.cn/open-apis/application/v3/is_user_admin"
